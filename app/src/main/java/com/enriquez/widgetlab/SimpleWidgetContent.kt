@@ -42,8 +42,12 @@ class SimpleWidgetContent : GlanceAppWidget() {
             )
             Row(horizontalAlignment = Alignment.CenterHorizontally) {
                 Button(
-                    text = "Página Principal",
+                    text = "Home",
                     onClick = actionStartActivity<MainActivity>()
+                )
+                Button(
+                    text = "Work",
+                    onClick = actionStartActivity<WorkActivity>()
                 )
             }
         }
