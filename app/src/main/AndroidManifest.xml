@@ -24,6 +24,19 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".WorkActivity"
+            android:exported="true"
+            android:label="Work Activity"
+            android:theme="@style/Theme.WidgetLab" />
+
+        <activity
+            android:name=".GoWaykiActivity"
+            android:exported="true"
+            android:label="GoWayki"
+            android:theme="@style/Theme.WidgetLab"
+            android:windowSoftInputMode="adjustResize" />
+
         <receiver
             android:name=".SimpleWidget"
             android:exported="true">
@@ -33,6 +46,17 @@
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/simple_widget_info" />
+        </receiver>
+
+        <receiver
+            android:name=".GoWaykiWidgetReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/gowayki_widget_info" />
         </receiver>
     </application>
 
